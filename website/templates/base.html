@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous" />
+
+  <title>{% block title %}Capstone Website{% endblock %}</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <a class="navbar-brand" href="#">Capstone Project</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" id="home" href="#">Home</a>
+        <a class="nav-link" href="#intro">Intro</a>
+        <a class="nav-link" href="#methods">Methods</a>
+        <a class="nav-link" href="#apps">Apps</a>
+        <a class="nav-link" href="#team">Team</a>
+      </div>
+    </div>
+  </nav>
+  <div class="full-screen-banner">
+    <h1>Investigating LLM Bias in Housing Contexts</h1>
+</div>
+
+
+  <div class="container">
+    {% block content %}
+    <!-- Default content goes here if no specific content is inserted. -->
+    {% endblock %}
+  </div>
+  <script>
+    var submitUrl = "{{ url_for('views.submit_form') }}";
+    </script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  <script src="{{ url_for('static', filename='index.js') }}"></script>
+
+
+</body>
+</html>
+

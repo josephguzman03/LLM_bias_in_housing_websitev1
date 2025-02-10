@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Noto+Serif+Hentaigana:wght@200..900&display=swap');
+
+body {
+    font-family: 'Figtree', sans-serif;
+}
+
+h1 {
+    font-family: 'Figtree', serif;
+    font-weight: 300;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Figtree', serif;
+    font-weight: 300;
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Figtree', serif;
+    font-weight: 300;
+    text-align: center;
+}
+
+
+p {
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+
+}
+
+footer {
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.header-section h2 {
+    margin-left: 20px;
+    color: #333;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+.nav-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensures the navbar stays on top of other content */
+}
+
+html, body {
+    height: 100%; /* Ensure the html and body tags take up full viewport height */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+
+
+.full-screen-banner h1 {
+    font-size: 2.5em; /* Adjust font size as necessary */
+    margin-bottom: 20px; /* Space between the title and the button */
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px; /* Adjust space between cards */
+    justify-content: center; /* Center the cards horizontally */
+    align-items: start; /* Align items from the start vertically */
+}
+  
+
+.full-screen-banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #b3cde0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.full-screen-banner input[type="text"] {
+    max-width: 400px; /* Limits the width of the text box */
+    margin-top: 20px; /* Adds some space above the text box */
+}
+
+@media (max-width: 768px) {
+    .full-screen-banner input[type="text"] {
+        max-width: 300px; /* Smaller width on smaller screens */
+        margin-top: 10px; /* Less space on smaller screens */
+    }
+}
+
+  .content {
+    height: 2000px;
+    position: relative;
+  }
+
+#go-to-bottom {
+    position: absolute;
+    top: 10px;
+    /* Without this, the button will be aligned to the top of the page
+    instead of bottom of navbar when scrolled */
+    scroll-margin-top: 60px;
+  }
+  #go-to-top {
+    position: absolute;
+    bottom: 10px;
+    scroll-margin-bottom: 0;
+  }
+  button {
+    cursor: pointer;
+    font-weight: 700;
+    transition: all 0.2s;
+    padding: 10px 20px;
+    border-radius: 100px;
+    background: #318CE7;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+  }
+  
+  button:hover {
+    background: #318CE7;
+  }
+  
+  button > svg {
+    width: 34px;
+    margin-left: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  button:hover svg {
+    transform: translateX(5px);
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
+  
